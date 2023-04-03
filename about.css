@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Marcellus', serif;
+}
+
+body {
+    /* scroll-behavior: smooth; */
+    background-color: #E3FFCC;
+}
+
+.main {
+    width: 100%;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    transition: 0.1s linear;
+    background-color: #E3FFCC;
+}
+
+.left {
+    width: 60%;
+    padding-left: 3%;
+}
+
+.left h1 {
+    padding: 25px;
+    font-size: 50px;
+    color: #fbd1b0;
+}
+
+.right {
+    display: flex;
+    padding-right: 5%;
+    justify-content: end;
+    align-items: center;
+    width: 40%;
+    gap: 15%;
+}
+
+.right a {
+    font-family: 'DM Sans', sans-serif;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    transition: 0.1s;
+}
+
+.right a:hover {
+    border-bottom: 3px solid black;
+}
+
+.active {
+    font-weight: bold;
+    font-size: 24px;
+    border-bottom: 3px solid black;
+}
+
+.login {
+    background-color: #03B700;
+    font-weight: bold;
+    padding: 20px 20px !important;
+}
+
+p {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.shadow {
+    box-shadow: 0px 0px 10px rgb(102, 102, 102);
+}
+
+.space {
+    height: 100px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 20px;
+    padding: 3%;
+    text-align: center;
+}
+
+.content h1 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.yt {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 90%;
+    height: 100vh;
+}
+
+.mem {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mem img {
+    border-radius: 50%;
+    width: 25%;
+    height: auto;
+}
+
+.aside {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.footer {
+    margin-top: 40px;
+    border-top: 2px solid #8a8a8a;
+    padding: 4%;
+    line-height: 0.8cm;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icons img {
+    width: 4%;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.footer h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    color: #fbd1b0;
+}
+
+.drawer {
+    position: absolute;
+    padding: 30px;
+    display: none;
+}
+
+.drawer img {
+    width: 20%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background-color: #E3FFCC;
+    overflow-x: hidden;
+    transition: 0.5s;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.ac {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+    .drawer {
+        display: block;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 100%;
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .left h1 {
+        padding: 15px;
+        font-size: 30px;
+    }
+
+    .header {
+        height: 70vh;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h1 {
+        margin-top: 50px;
+        font-size: 25px;
+    }
+
+    .footer h1 {
+        font-size: 30px;
+    }
+
+    .content {
+        gap: 10px;
+    }
+
+    .content h1 {
+        margin-top: 0;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        width: 90%;
+    }
+
+    .yt {
+        margin-top: 50px;
+        height: 60vh;
+    }
+
+    .mem {
+        width: 90%;
+        padding-left: 2%;
+    }
+
+    .mem img {
+        width: 20%;
+    }
+
+    .aside h2 {
+        font-size: 25px;
+    }
+
+    .aside p {
+        font-size: 20px;
+    }
+
+    /* .sidenav {
+        width: 50%;
+    } */
+
+    .sidenav a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        gap: 10px;
+    }
+
+    .content p {
+        width: 90%;
+        text-align: justify;
+    }
+
+    .yt {
+        margin-top: 50px;
+        height: 50vh;
+    }
+
+    .mem {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .mem img {
+        width: 30%;
+    }
+
+    .aside h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .aside p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .icons img {
+        width: 8%;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    /* .sidenav {
+        width: 70%;
+    } */
+
+    .sidenav a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .drawer img {
+        padding-top: 5px;
+        width: 13%;
+    }
+
+    .left h1 {
+        font-size: 20px;
+    }
+
+    .header {
+        height: 80vh;
+    }
+
+    .hero {
+        height: 80vh;
+    }
+
+    .hero h1 {
+        padding: 0;
+        margin-top: 0;
+        margin-left: 7%;
+        margin-right: 7%;
+        font-size: 20px;
+        line-height: 0.9cm;
+    }
+    
+    .content {
+        gap: 10px;
+    }
+
+    .content h1 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    .yt {
+        margin-top: 50px;
+        height: 30vh;
+    }
+
+    .mem {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .mem img {
+        width: 40%;
+    }
+
+    .aside h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .aside p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .footer h1 {
+        font-size: 20px;
+        line-height: 0.9cm;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .icons img {
+        width: 10%;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .log {
+        padding: 8px 12px;
+    }
+
+    .footer p {
+        font-size: 15px;
+        line-height: 0.7cm;
+    }
+}
